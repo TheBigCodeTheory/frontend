@@ -1,20 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { FormButton } from './FormButton'
 
-const meta = {
+const meta: Meta<typeof FormButton> = {
   title: 'UI/Buttons/FormButton',
   component: FormButton,
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof FormButton>
+}
 
 export default meta
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof FormButton>
 
 export const Primary: Story = {
   args: {
-    children: 'FormButton',
+    children: 'Form Button',
+  },
+  parameters: {
+    jest: 'FormButton.test.tsx',
   },
 }
