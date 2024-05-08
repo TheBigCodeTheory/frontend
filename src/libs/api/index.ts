@@ -16,7 +16,7 @@ async function fetchAPI<T>(
   const BASE_API_URL =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3080/api/v1'
-      : 'https://food-be-gi7f.onrender.com/api/v1'
+      : 'prod'
   const url = BASE_API_URL + path
 
   const fullConfig = {
