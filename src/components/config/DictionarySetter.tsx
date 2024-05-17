@@ -13,6 +13,5 @@ export const DictionarySetter = ({ dictionary }: { dictionary: any }) => {
     }
   }, [])
 
-  console.log(state, 'TEST LAYOUT')
   return null
 }

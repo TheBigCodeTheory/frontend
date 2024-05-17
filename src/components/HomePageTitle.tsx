@@ -1,9 +1,14 @@
 'use client'
 
 import { useSettingsStore } from '@/stores'
+import { AuthAPI } from '@/libs/api/auth'
 
 export const HomePageTitle = () => {
   const dict = useSettingsStore((state) => state.dict)
+  async function handleLogin() {
+    const response = await AuthAPI.login('ezequiel.n.villa@gmail.com', '208679')
+    console.log({ response })
+  }
 
   return (
     <div>
@@ -12,6 +17,8 @@ export const HomePageTitle = () => {
           {dict.home.title}
         </h1>
       )}
+      <br />
+      <button onClick={() => handleLogin}>login hardcoded</button>
     </div>
   )
 }
