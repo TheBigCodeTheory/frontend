@@ -1,7 +1,9 @@
-import { getDictionary } from '@/app/[lang]/dictionaries'
-import type { PageParamsProps } from '@/types'
+import { HomePageTitle } from '@/components/HomePageTitle'
 
-export default async function HomePage({ params: { lang } }: PageParamsProps) {
-  const dict = await getDictionary(lang)
-  return <div>{dict.home.title}</div>
+export default function HomePage() {
+  return (
+    <div>
+      <HomePageTitle />
+    </div>
+  )
 }
