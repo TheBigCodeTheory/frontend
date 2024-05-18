@@ -1,10 +1,10 @@
 'use client'
 
-import { useSettingsStore } from '@/stores'
 import { AuthAPI } from '@/libs/api/auth'
+import { useSettingsFacade } from '@/hooks/facade/useSettingsFacade'
 
 export const HomePageTitle = () => {
-  const dict = useSettingsStore((state) => state.dict)
+  const { dict } = useSettingsFacade()
   async function handleLogin() {
     const response = await AuthAPI.login('ezequiel.n.villa@gmail.com', '208679')
     console.log({ response })

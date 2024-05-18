@@ -16,6 +16,6 @@ export const useSettingsStore = create<SettingsStore>()((set) => ({
   language: '',
   dict: {},
 
-  setLanguage: (value: string) => set((state) => ({ language: value })),
-  setDictionary: (value: any) => set((state) => ({ dict: value })),
+  setLanguage: (value: string) => set(() => ({ language: value })),
+  setDictionary: (value: any) => set(() => ({ dict: value })),
 }))
