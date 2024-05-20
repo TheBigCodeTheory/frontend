@@ -1,0 +1,1 @@
+export { PageParamsProps } from './global'
