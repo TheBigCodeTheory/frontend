@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { inter, ubuntu } from '../fonts';
+import "../globals.css";
 import { getDictionary } from './dictionaries'
 import { DictionarySetter } from '@/components/config'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,7 +22,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${ubuntu.variable}`}>
         <DictionarySetter dictionary={dictionary} />
         {children}
       </body>
