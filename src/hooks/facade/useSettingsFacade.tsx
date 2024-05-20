@@ -2,7 +2,7 @@ import { useSettingsStore } from '@/stores'
 import { useShallow } from 'zustand/react/shallow'
 
 export const useSettingsFacade = () => {
-  const { language, dict, setLanguage, setDictionary } = useSettingsStore(
+  return useSettingsStore(
     useShallow((state) => ({
       language: state.language,
       dict: state.dict,
@@ -10,5 +10,4 @@ export const useSettingsFacade = () => {
       setDictionary: state.setDictionary,
     })),
   )
-  return { language, dict, setLanguage, setDictionary }
 }
