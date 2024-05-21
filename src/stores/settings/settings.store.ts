@@ -13,7 +13,7 @@ export type SettingsState = {
 
 export type Actions = {
   setLanguage: (value: string) => void
-  setDictionary: (value: any) => void
+  setDictionary: (value: NestedDict) => void
 }
 
 export type SettingsStore = SettingsState & Actions
@@ -23,5 +23,5 @@ export const useSettingsStore = create<SettingsStore>()((set) => ({
   dict: {},
 
   setLanguage: (value: string) => set(() => ({ language: value })),
-  setDictionary: (value: any) => set(() => ({ dict: value })),
+  setDictionary: (value: NestedDict) => set(() => ({ dict: value })),
 }))
