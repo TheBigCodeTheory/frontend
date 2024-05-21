@@ -1,8 +1,14 @@
 import { create } from 'zustand'
 
+export type StringDict = Record<string, string>
+
+export type NestedDict = StringDict & {
+  [key: string]: StringDict | NestedDict
+}
+
 export type SettingsState = {
   language: string
-  dict: any
+  dict: NestedDict
 }
 
 export type Actions = {

@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
-import { inter, ubuntu } from '../fonts';
-import "../globals.css";
+import { inter, ubuntu } from '../fonts'
+import '../globals.css'
 import { getDictionary } from './dictionaries'
 import { DictionarySetter } from '@/components/config'
-
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,7 +23,9 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${ubuntu.variable}`}>
         <DictionarySetter dictionary={dictionary} />
-        {children}
+        <div className="min-h-screen flex flex-col justify-center items-center">
+          {children}
+        </div>
       </body>
     </html>
   )

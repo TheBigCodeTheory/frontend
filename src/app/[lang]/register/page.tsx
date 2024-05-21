@@ -1,9 +1,9 @@
 import { PageTitle } from '@/components/PageTitle'
 
-export default function HomePage() {
+export default function RegisterPage() {
   return (
     <div>
-      <PageTitle>Home Page</PageTitle>
+      <PageTitle>Register Page</PageTitle>
     </div>
   )
 }
