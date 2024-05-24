@@ -1,4 +1,5 @@
 //Buttons
 export { FormButton } from './buttons/form-button/FormButton'
 
-//Headers
+//Texts
+export { Title } from "./texts/Title/Title";
