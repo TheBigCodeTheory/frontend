@@ -15,8 +15,8 @@ type Story = StoryObj<typeof Title>
 
 export const Default: Story = {
   args: {
-    color: "text-white",
-    "text": "Título principal"
+    color: "text-darkPurple",
+    text: "Default Title",
   },
   parameters: {
     jest: ["Title.test.tsx"],

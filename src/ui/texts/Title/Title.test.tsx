@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom' // Para tener acceso a expect(...).toBeInTheDocument()
-import { Title } from './Title' // Asegúrate de importar correctamente tu componente
+import { Title } from './Title'
 
 describe('Title', () => {
   it('renders title with provided props', () => {
