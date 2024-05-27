@@ -1,5 +1,3 @@
-import { FontType } from "@/types/ui";
-
 type SubtitleProps = {
     text: string;
     color?: string;
