@@ -1,11 +1,9 @@
 //Buttons
 export { FormButton } from './buttons/form-button/FormButton'
-
-// Forms
-export { FormContainer } from "./forms/form-container/FormContainer";
  
 // Inputs
-export { TextInput } from "./inputs/text-inputs/TextInput";
+export { InputText } from "./inputs/text/InputText";
+export { InputEmail } from "./inputs/email/InputEmail";
 
 //Texts
 export { Title } from "./texts/Title/Title";
